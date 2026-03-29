@@ -1,0 +1,173 @@
+/* =========================================
+   Clash Verge Rev 美化 CSS - 终极无缝拼接 & 去重叠版
+   ========================================= */
+
+/* 1. 设置全局背景图片 */
+body, #root {
+    background-image: url('https://i.imgur.com/UryfUxW.jpeg') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+}
+
+/* 2. 击穿底层遮挡 */
+.MuiPaper-root.layout,
+.layout-content,
+.layout-content__right,
+.the-content,
+.base-page,
+.base-container,
+.base-container > section,
+.base-content,
+.the-bar {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* -----------------------------------------
+   3. 浅色模式（默认半透明样式）
+   ----------------------------------------- */
+.layout-content__left {              
+    background-color: rgba(255, 255, 255, 0.5) !important;
+    border-right: 1px solid rgba(255, 255, 255, 0.3) !important;
+}
+
+.base-page > header {
+    background-color: rgba(255, 255, 255, 0.5) !important;
+    position: relative !important; 
+}
+
+.base-page > header::before {
+    content: "" !important;
+    position: absolute !important;
+    bottom: 100% !important; 
+    left: 0 !important;
+    right: 0 !important;
+    height: 50px !important; 
+    background-color: rgba(255, 255, 255, 0.5) !important; 
+    pointer-events: none !important; 
+}
+
+.MuiInputBase-root {
+    background-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+[class*="MuiGrid-grid-xs-"] > .MuiBox-root,
+.MuiCard-root,
+.MuiButton-root:not(.MuiListItemButton-root) {
+    background-color: rgba(255, 255, 255, 0.75) !important;
+    border: 1px solid rgba(255, 255, 255, 0.5) !important;
+    border-radius: 8px !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05) !important; 
+}
+
+.MuiButton-containedPrimary,
+.MuiButton-contained {
+    color: #333333 !important; 
+}
+
+[data-testid="virtuoso-item-list"] .MuiListItemButton-root,
+[data-testid="virtuoso-item-list"] > div > .MuiBox-root {
+    background: rgba(255, 255, 255, 0.75) !important;       
+    background-color: rgba(255, 255, 255, 0.75) !important; 
+    border: 1px solid rgba(255, 255, 255, 0.5) !important;
+    border-radius: 8px !important; 
+    margin-bottom: 4px !important; 
+    padding: 8px !important; 
+}
+
+/* -----------------------------------------
+   4. 深色模式适配
+   ----------------------------------------- */
+@media (prefers-color-scheme: dark) {
+    .layout-content__left {              
+        background-color: rgba(0, 0, 0, 0.4) !important;
+        border-right: 1px solid rgba(255, 255, 255, 0.15) !important;
+    }
+    .base-page > header,
+    .MuiInputBase-root {
+        background-color: rgba(0, 0, 0, 0.4) !important;
+    }
+    .base-page > header::before {
+        background-color: rgba(0, 0, 0, 0.4) !important;
+    }
+    [class*="MuiGrid-grid-xs-"] > .MuiBox-root,
+    .MuiCard-root,
+    .MuiButton-root:not(.MuiListItemButton-root) {
+        background-color: rgba(0, 0, 0, 0.65) !important;
+        border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    }
+    .MuiButton-containedPrimary,
+    .MuiButton-contained {
+        color: #ffffff !important; 
+    }
+    [data-testid="virtuoso-item-list"] .MuiListItemButton-root,
+    [data-testid="virtuoso-item-list"] > div > .MuiBox-root {
+        background: rgba(0, 0, 0, 0.65) !important;       
+        background-color: rgba(0, 0, 0, 0.65) !important; 
+        border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    }
+}
+
+:is(html[data-theme="dark"], html.dark, [data-mui-color-scheme="dark"]) .layout-content__left {              
+    background-color: rgba(0, 0, 0, 0.4) !important;
+    border-right: 1px solid rgba(255, 255, 255, 0.15) !important;
+}
+
+:is(html[data-theme="dark"], html.dark, [data-mui-color-scheme="dark"]) .base-page > header,
+:is(html[data-theme="dark"], html.dark, [data-mui-color-scheme="dark"]) .MuiInputBase-root {
+    background-color: rgba(0, 0, 0, 0.4) !important;
+}
+
+:is(html[data-theme="dark"], html.dark, [data-mui-color-scheme="dark"]) .base-page > header::before {
+    background-color: rgba(0, 0, 0, 0.4) !important;
+}
+
+:is(html[data-theme="dark"], html.dark, [data-mui-color-scheme="dark"]) [class*="MuiGrid-grid-xs-"] > .MuiBox-root,
+:is(html[data-theme="dark"], html.dark, [data-mui-color-scheme="dark"]) .MuiCard-root,
+:is(html[data-theme="dark"], html.dark, [data-mui-color-scheme="dark"]) .MuiButton-root:not(.MuiListItemButton-root) {
+    background-color: rgba(0, 0, 0, 0.65) !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+}
+
+:is(html[data-theme="dark"], html.dark, [data-mui-color-scheme="dark"]) .MuiButton-containedPrimary,
+:is(html[data-theme="dark"], html.dark, [data-mui-color-scheme="dark"]) .MuiButton-contained {
+    color: #ffffff !important; 
+}
+
+:is(html[data-theme="dark"], html.dark, [data-mui-color-scheme="dark"]) [data-testid="virtuoso-item-list"] .MuiListItemButton-root,
+:is(html[data-theme="dark"], html.dark, [data-mui-color-scheme="dark"]) [data-testid="virtuoso-item-list"] > div > .MuiBox-root {
+    background: rgba(0, 0, 0, 0.65) !important;       
+    background-color: rgba(0, 0, 0, 0.65) !important; 
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+}
+
+/* -----------------------------------------
+   5. 通用强制清理规则
+   ----------------------------------------- */
+[class*="MuiGrid-grid-xs-"] > .MuiBox-root .MuiBox-root {
+    background-color: transparent !important;
+}
+
+/* ★★★ 核心修复：精准剥离代理页面的双层重叠！★★★ */
+/* 只要这个包裹层里含有节点按钮，就把它自己变成完全透明 */
+[data-testid="virtuoso-item-list"] > div > .MuiBox-root:has(.MuiListItemButton-root) {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+}
+
+[data-testid="virtuoso-item-list"] > div > .MuiBox-root .MuiBox-root {
+    background-color: transparent !important;
+}
+
+.the-menu .MuiListItemButton-root {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+}
